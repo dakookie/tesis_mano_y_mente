@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <!-- COLUMNA 1: NOMBRE -->
+        <TextView
+            android:id="@+id/tvItemNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/ejemplo_nombre_leaderboard"
+            android:textColor="#8D6E63"
+            android:textSize="22sp" />
+
+        <!-- COLUMNA 2: AVATAR -->
+        <ImageView
+            android:id="@+id/ivItemAvatar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:importantForAccessibility="no"
+            android:src="@drawable/monster_teacher" />
+
+        <!-- COLUMNA 3: EDAD -->
+        <TextView
+            android:id="@+id/tvItemEdad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/informacion_edad"
+            android:textColor="#8D6E63"
+            android:textSize="22sp" />
+
+        <!-- COLUMNA 4: BOTÓN EDITAR -->
+        <!-- Usamos el mismo ícono de lápiz que ya habías creado para el menú -->
+        <!-- Al lado de tu TextView de Edad, o al final de tu LinearLayout horizontal -->
+
+        <ImageButton
+            android:id="@+id/ibItemEditar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/boton_icono_editar"
+            android:src="@android:drawable/ic_menu_edit"
+            app:tint="#795548" />
+
+        <!-- NUEVO BOTÓN DE JUGAR CON TEXTO -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnItemJugar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_boton_docente_activo"
+            android:paddingHorizontal="16dp"
+            android:text="@string/boton_jugar"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- LÍNEA DIVISORIA SUTIL ENTRE NIÑOS -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#D7CCC8" />
+</LinearLayout>
