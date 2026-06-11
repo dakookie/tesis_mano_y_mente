@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.inicio.MainActivity">
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/fondo_principal"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botones superiores (Sin cambios, tamaño fijo de 56dp es correcto para touch targets) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSonidoMain"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        app:cardCornerRadius="28dp"
+        app:cardBackgroundColor="#DEB887"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibSonido"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/boton_sonido"
+            android:src="@drawable/ic_baseline_volume_up_24"
+            android:scaleType="centerInside"
+            android:padding="12dp"
+            app:tint="#5D4037" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDocenteMain"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="28dp"
+        app:cardBackgroundColor="#AACBDC"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibDocente"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/boton_panel_docente"
+            android:src="@drawable/ic_baseline_person_24"
+            android:scaleType="centerInside"
+            android:padding="12dp"
+            app:tint="#5D4037" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Guidelines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHeaderMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glFooterMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <!-- Título refactorizado con Ratio -->
+    <ImageView
+        android:id="@+id/ivTitulo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/button_title"
+        app:layout_constraintWidth_percent="0.65"
+        app:layout_constraintDimensionRatio="H,5:1"
+        app:layout_constraintBottom_toTopOf="@+id/glHeaderMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!-- Mascota refactorizada basándose en la altura -->
+    <ImageView
+        android:id="@+id/ivMascota"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/monster_principal"
+        app:layout_constraintHeight_percent="0.75"
+        app:layout_constraintDimensionRatio="1:1.2"
+        app:layout_constraintBottom_toTopOf="@+id/glFooterMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glHeaderMain" />
+
+    <!-- Botón iniciar refactorizado con Ratio -->
+    <ImageView
+        android:id="@+id/ivBotonIniciar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:contentDescription="@string/boton_inicio_juego"
+        android:focusable="true"
+        android:src="@drawable/button_game"
+        app:layout_constraintWidth_percent="0.50"
+        app:layout_constraintDimensionRatio="H,3:1"
+        app:layout_constraintBottom_toBottomOf="@+id/glFooterMain"
+        app:layout_constraintTop_toBottomOf="@+id/glFooterMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
