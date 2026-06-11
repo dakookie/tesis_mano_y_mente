@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.docente.DocenteActivity">
+
+    <ImageView
+        android:id="@+id/ivBackgroundDocente"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/fondo_principal"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBackDocente"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="#DEB887"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibBackDocente"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/boton_retroceso"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="#5D4037" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSonidoDocente"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        app:cardCornerRadius="28dp"
+        app:cardBackgroundColor="#DEB887"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toEndOf="@+id/cvBackDocente"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibSonidoDocente"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/boton_sonido"
+            android:src="@drawable/ic_baseline_volume_up_24"
+            android:scaleType="centerInside"
+            android:padding="12dp"
+            app:tint="#5D4037" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivTituloDocente"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/button_title"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintDimensionRatio="H,4:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottomDocente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTableroPrincipal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_panel_crema"
+        android:elevation="8dp"
+        app:layout_constraintWidth_percent="0.80"
+        app:layout_constraintTop_toBottomOf="@+id/ivTituloDocente"
+        app:layout_constraintBottom_toTopOf="@+id/glBottomDocente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glSplitDocente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.38" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#E0D4C3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/glSplitDocente"
+            app:layout_constraintEnd_toEndOf="@+id/glSplitDocente"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_menu_lateral"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/glSplitDocente" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLeaderboard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_boton_docente_activo"
+            android:text="@string/boton_tabla_posiciones"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@android:color/white"
+            android:drawablePadding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="20sp"
+            android:maxLines="2"
+            android:gravity="center"
+            app:layout_constraintHeight_percent="0.20"
+            app:layout_constraintBottom_toTopOf="@+id/btnMisEstudiantes"
+            app:layout_constraintEnd_toStartOf="@+id/glSplitDocente"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMisEstudiantes"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_boton_docente_inactivo"
+            android:text="@string/boton_mis_estudiantes"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_baseline_badge_24"
+            android:drawableTint="@android:color/white"
+            android:drawablePadding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="20sp"
+            android:maxLines="2"
+            android:gravity="center"
+            app:layout_constraintHeight_percent="0.20"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
+            app:layout_constraintEnd_toStartOf="@+id/glSplitDocente"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLeaderboard" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegistrar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_boton_docente_inactivo"
+            android:text="@string/boton_registrar_estudiantes"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_baseline_person_add_24"
+            android:drawableTint="@android:color/white"
+            android:drawablePadding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="20sp"
+            android:maxLines="2"
+            android:gravity="center"
+            app:layout_constraintHeight_percent="0.20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/glSplitDocente"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMisEstudiantes" />
+
+        <FrameLayout
+            android:id="@+id/flContenedorDocente"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/glSplitDocente"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/vistaRegistrar"
+                layout="@layout/layout_registrar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+            <include
+                android:id="@+id/vistaMisEstudiantes"
+                layout="@layout/layout_mis_estudiantes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/vistaLeaderboard"
+                layout="@layout/layout_leaderboard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

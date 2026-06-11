@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sombra/Borde inferior 3D -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="30dp"/>
+            <solid android:color="#6D4C41"/>
+        </shape>
+    </item>
+    <!-- Relleno principal café y costura -->
+    <item android:bottom="6dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="30dp"/>
+            <solid android:color="#8D6E63"/>
+            <stroke android:width="2dp" android:color="#BCAAA4" android:dashWidth="6dp" android:dashGap="4dp"/>
+        </shape>
+    </item>
+</layer-list>

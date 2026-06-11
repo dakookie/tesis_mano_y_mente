@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sombra/Borde inferior 3D -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="30dp"/>
+            <solid android:color="#43A047"/>
+        </shape>
+    </item>
+    <!-- Relleno principal verde y costura -->
+    <item android:bottom="6dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="30dp"/>
+            <solid android:color="#689F38"/>
+            <!-- Costura punteada -->
+            <stroke android:width="2dp" android:color="#AED581" android:dashWidth="6dp" android:dashGap="4dp"/>
+        </shape>
+    </item>
+</layer-list>
