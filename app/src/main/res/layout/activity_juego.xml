@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.juego.JuegoActivity">
+
+    <ImageView
+        android:id="@+id/ivBackgroundJuego"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/fondo_principal"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTopJuego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottomJuego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <!-- Botones superiores (Se mantienen con tamaño fijo ideal para toque) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBackJuego"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        app:cardCornerRadius="28dp"
+        app:cardBackgroundColor="#DEB887"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibBackJuego"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/boton_retroceso"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:scaleType="centerInside"
+            android:padding="12dp"
+            app:tint="#5D4037" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSonidoJuego"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        app:cardCornerRadius="28dp"
+        app:cardBackgroundColor="#DEB887"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toEndOf="@+id/cvBackJuego"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibSonidoJuego"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/boton_sonido"
+            android:src="@drawable/ic_baseline_volume_up_24"
+            android:scaleType="centerInside"
+            android:padding="12dp"
+            app:tint="#5D4037" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Mini Perfil (Se mantiene igual) -->
+    <LinearLayout
+        android:id="@+id/llPerfilJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_input_text"
+        android:elevation="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvNombreJugador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/nombre_jugador"
+            android:textColor="#5D4037"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivAvatarJugador"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/monster_astronaut" />
+    </LinearLayout>
+
+    <!-- Título guiado por ancho y ratio -->
+    <ImageView
+        android:id="@+id/ivTituloAnimal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="13dp"
+        android:contentDescription="@string/titulo_nombre_animal"
+        tools:src="@drawable/title_chicken"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintDimensionRatio="H,4:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Figura del animal guiada por ALTO y ratio para evitar desbordes -->
+    <ImageView
+        android:id="@+id/ivAnimalCentro"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/mano_madera"
+        tools:src="@drawable/hand_chicken"
+        app:layout_constraintHeight_percent="0.55"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@+id/glTopJuego"
+        app:layout_constraintBottom_toTopOf="@+id/glBottomJuego"
+        app:layout_constraintStart_toEndOf="@+id/ivMascotaJuego"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Mascota guiada por ALTO y ratio para evitar desbordes -->
+    <ImageView
+        android:id="@+id/ivMascotaJuego"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/monster_indicate_right"
+        app:layout_constraintHeight_percent="0.75"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintTop_toBottomOf="@+id/glTopJuego"
+        app:layout_constraintBottom_toTopOf="@+id/glBottomJuego"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivAnimalCentro"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Barra de progreso guiada por ancho y ratio -->
+    <ImageView
+        android:id="@+id/ivProgresoManos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/manos_progreso"
+        tools:src="@drawable/first_hand"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintDimensionRatio="H,6:1"
+        app:layout_constraintTop_toBottomOf="@+id/glBottomJuego"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
