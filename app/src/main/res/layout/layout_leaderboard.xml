@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDF8F5"
+    android:padding="16dp">
+
+    <!-- BOTONES DE CATEGORÍA (TABS) -->
+    <LinearLayout
+        android:id="@+id/llTabsLeaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnTabAnimales"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_boton_docente_activo"
+            android:text="@string/boton_leaderboard_animales"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnTabFiguras"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_boton_docente_inactivo"
+            android:text="@string/boton_leaderboard_figuras"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- CABECERA DE LA TABLA -->
+    <LinearLayout
+        android:id="@+id/llHeaderTabla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/llTabsLeaderboard">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="@string/numero_tabla_leaderboard"
+            android:textAlignment="center"
+            android:textColor="#795548"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/nombre_tabla_leaderboard"
+            android:textColor="#795548"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="@string/avatar_tabla_leaderboard"
+            android:textAlignment="center"
+            android:textColor="#795548"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="@string/edad_tabla_leaderboard"
+            android:textAlignment="center"
+            android:textColor="#795548"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="@string/aciertos_errores_tabla_leaderboard"
+            android:textAlignment="center"
+            android:textColor="#795548"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="@string/detalle_tabla_leaderboard"
+            android:textAlignment="center"
+            android:textColor="#795548"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- LÍNEA SEPARADORA DE LA CABECERA -->
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D7CCC8"
+        app:layout_constraintTop_toBottomOf="@+id/llHeaderTabla" />
+
+    <!-- LISTA DE ESTUDIANTES (RECYCLER VIEW) -->
+    <!-- NOTA: Ahora el constraintBottom va hasta el "parent" (el fondo de la pantalla) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListaLeaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSeparator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

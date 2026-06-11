@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardBackgroundColor="#FDF8F5"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_pantalla_editar_estudiante"
+            android:textAlignment="center"
+            android:textColor="#5D4037"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- CAMPO DE NOMBRE -->
+        <EditText
+            android:id="@+id/etEditarNombre"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input_text"
+            android:hint="@string/escribir_nombre_ninio"
+            android:inputType="text|textCapWords"
+            android:paddingStart="16dp"
+            android:textColor="#5D4037"
+            android:textColorHint="#A1887F" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/texto_edad"
+            android:textColor="#5D4037"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- BOTONES DE EDAD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEditarEdad3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_boton_docente_inactivo"
+                android:text="@string/boton_3"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEditarEdad4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_boton_docente_inactivo"
+                android:text="@string/boton_4"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- BOTONES DE ACCIÓN -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDialogCancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#9E9E9E"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:padding="8dp"
+                android:text="@string/boton_cancelar"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnDialogEliminar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#E53935"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:padding="8dp"
+                android:text="@string/boton_eliminar"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="4dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnDialogGuardar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:padding="8dp"
+                android:text="@string/boton_guardar"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

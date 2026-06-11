@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp">
+
+        <!-- Número de posición -->
+        <TextView
+            android:id="@+id/tvPosicionLeaderboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="@string/informacion_numero_posicion"
+            android:textAlignment="center"
+            android:textColor="#5D4037"
+            android:textSize="18sp" />
+
+        <!-- Nombre -->
+        <TextView
+            android:id="@+id/tvNombreLeaderboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/ejemplo_nombre_leaderboard"
+            android:textColor="#5D4037"
+            android:textSize="18sp" />
+
+        <!-- Avatar -->
+        <ImageView
+            android:id="@+id/ivAvatarLeaderboard"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.2"
+            android:importantForAccessibility="no"
+            android:src="@drawable/monster_astronaut" />
+
+        <!-- Edad -->
+        <TextView
+            android:id="@+id/tvEdadLeaderboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="@string/informacion_edad"
+            android:textAlignment="center"
+            android:textColor="#5D4037"
+            android:textSize="18sp" />
+
+        <!-- Aciertos/Errores -->
+        <TextView
+            android:id="@+id/tvScoreLeaderboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="@string/informacion_aciertos_errores"
+            android:textAlignment="center"
+            android:textColor="#5D4037"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/ibVerDetalle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.15"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/boton_resumen_juego"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:src="@drawable/ic_ver_detalle"
+            app:tint="#5D4037" />
+
+    </LinearLayout>
+
+    <!-- Línea separadora sutil debajo de cada niño -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EFEBE9" />
+</LinearLayout>
