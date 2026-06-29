@@ -291,6 +291,7 @@ class DocenteActivity : AppCompatActivity() {
         val btnCancelar = dialog.findViewById<Button>(R.id.btnDialogCancelar)
         val btnEliminar = dialog.findViewById<Button>(R.id.btnDialogEliminar)
         val btnGuardar = dialog.findViewById<Button>(R.id.btnDialogGuardar)
+        val btnCerrar = dialog.findViewById<ImageButton>(R.id.btnCerrarDialog)
 
         var edadEditada = estudiante.edad
         etNombre.setText(estudiante.nombre)
@@ -305,6 +306,7 @@ class DocenteActivity : AppCompatActivity() {
         btnEdad4.setOnClickListener { edadEditada = 4; actualizarBotonesEdadDialogo() }
 
         btnCancelar.setOnClickListener { dialog.dismiss() }
+        btnCerrar.setOnClickListener { dialog.dismiss() }
 
         btnEliminar.setOnClickListener {
             lifecycleScope.launch(Dispatchers.IO) {
@@ -351,7 +353,6 @@ class DocenteActivity : AppCompatActivity() {
         val tvCategoria = dialog.findViewById<android.widget.TextView>(R.id.tvCategoriaDetalle)
         val ibCerrarX = dialog.findViewById<ImageButton>(R.id.ibCerrarDetalle)
 
-        // ¡ATENCIÓN! Ahora buscamos un LinearLayout, no un TableLayout
         val llTablaDetalles = dialog.findViewById<android.widget.LinearLayout>(R.id.llTablaDetalles)
         val tvMensajeVacio = dialog.findViewById<android.widget.TextView>(R.id.tvMensajeVacio)
         val tvCabeceraPieza = dialog.findViewById<android.widget.TextView>(R.id.tvCabeceraPieza)
