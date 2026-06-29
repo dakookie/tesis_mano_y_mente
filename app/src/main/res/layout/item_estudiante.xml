@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:weightSum="5"
         android:paddingTop="12dp"
         android:paddingBottom="12dp">
 
@@ -31,6 +32,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
             android:src="@drawable/monster_teacher" />
 
         <!-- COLUMNA 3: EDAD -->
@@ -45,14 +47,11 @@
             android:textSize="22sp" />
 
         <!-- COLUMNA 4: BOTÓN EDITAR -->
-        <!-- Usamos el mismo ícono de lápiz que ya habías creado para el menú -->
-        <!-- Al lado de tu TextView de Edad, o al final de tu LinearLayout horizontal -->
-
         <ImageButton
             android:id="@+id/ibItemEditar"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/boton_icono_editar"
             android:src="@android:drawable/ic_menu_edit"
@@ -63,7 +62,7 @@
             android:id="@+id/btnItemJugar"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginStart="8dp"
+            android:layout_weight="1"
             android:background="@drawable/bg_boton_docente_activo"
             android:paddingHorizontal="16dp"
             android:text="@string/boton_jugar"

@@ -68,4 +68,6 @@
     <string name="boton_4_pantalla_registrar">4</string>
     <string name="avatar_pantalla_registrar">Avatar:</string>
     <string name="guardar_pantalla_registrar">Guardar</string>
+    <string name="accion_tabla_estudiante">Acción</string>
+    <string name="boton_ayuda">boton_ayuda</string>
 </resources>

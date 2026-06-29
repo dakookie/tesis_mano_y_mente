@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="@string/nombre_tabla_estudiantes"
             android:textColor="#5D4037"
@@ -42,7 +42,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.9"
             android:gravity="center"
             android:text="@string/edad_tabla_estudiantes"
             android:textColor="#5D4037"
@@ -55,6 +55,16 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/editar_tabla_estudiantes"
+            android:textColor="#5D4037"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/accion_tabla_estudiante"
             android:textColor="#5D4037"
             android:textSize="20sp"
             android:textStyle="bold" />
