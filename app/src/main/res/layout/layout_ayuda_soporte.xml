@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:fadeScrollbars="false"
+    android:scrollbarSize="6dp"
+    android:scrollbarThumbVertical="@drawable/bg_scrollbar"
+    android:scrollbarStyle="outsideOverlay"
+    android:padding="24dp"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Asistencia Técnica"
+            android:textColor="#5D4037"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Solución a problemas frecuentes:"
+            android:textColor="#8D6E63"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- ========================= -->
+        <!-- PROBLEMA 1: BLUETOOTH     -->
+        <!-- ========================= -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚠️ La mesa no se conecta"
+                android:textColor="#5D4037"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Verifica que esté encendida. Apaga y enciende el Bluetooth de tu dispositivo y vuelve a sincronizar."
+                android:textColor="#8D6E63"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- ========================= -->
+        <!-- PROBLEMA 2: LECTOR RFID   -->
+        <!-- ========================= -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚠️ No reconoce la figura"
+                android:textColor="#5D4037"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Coloca la pieza plana y centrada. Aleja objetos metálicos como llaves o anillos que causen interferencia."
+                android:textColor="#8D6E63"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- ========================= -->
+        <!-- PROBLEMA 3: SONIDO        -->
+        <!-- ========================= -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚠️ No se escucha el juego"
+                android:textColor="#5D4037"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Revisa que el botón de la pantalla principal no esté silenciado y sube el volumen de tu dispositivo."
+                android:textColor="#8D6E63"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- ========================= -->
+        <!-- SECCIÓN DE CONTACTO       -->
+        <!-- ========================= -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EFEBE9"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Necesitas más ayuda?"
+                android:textColor="#5D4037"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Comunícate con nuestro equipo técnico:"
+                android:textColor="#8D6E63"
+                android:textSize="15sp" />
+
+            <!-- Datos de contacto actualizados -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="📧 Correo: soportemanoymente@gmail.com"
+                android:textColor="#5D4037"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="📞 Teléfono: +593 979060119"
+                android:textColor="#5D4037"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.damaris.suquillo.manoymente"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.damaris.suquillo.manoymente"
@@ -44,6 +44,8 @@ dependencies {
     implementation("androidx.room:room-ktx:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation("androidx.media3:media3-exoplayer:1.10.1")
+    implementation("androidx.media3:media3-ui:1.10.1")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

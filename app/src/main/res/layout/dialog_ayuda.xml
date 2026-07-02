@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:fadeScrollbars="false"
+    android:scrollbarSize="6dp"
+    android:scrollbarThumbVertical="@drawable/bg_scrollbar"
+    android:scrollbarStyle="outsideOverlay"
+    android:padding="24dp"
+    android:clipToPadding="false">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        app:cardBackgroundColor="#FDF8F5"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ========================================== -->
+            <!-- PANEL IZQUIERDO (Menú de Pestañas)         -->
+            <!-- ========================================== -->
+            <LinearLayout
+                android:id="@+id/panelIzquierdo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#EFEBE9"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.35">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="Centro de Ayuda"
+                    android:textAlignment="center"
+                    android:textColor="#5D4037"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Línea superior -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#D7CCC8" />
+
+                <!-- Pestaña 1: Activa por defecto -->
+                <TextView
+                    android:id="@+id/btnTabGuia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="16dp"
+                    android:text="Instrucciones"
+                    android:textAlignment="center"
+                    android:textColor="#5D4037"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Línea divisoria -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#D7CCC8" />
+
+                <!-- Pestaña 2: Inactiva -->
+                <TextView
+                    android:id="@+id/btnTabVideos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="16dp"
+                    android:text="Tutoriales"
+                    android:textAlignment="center"
+                    android:textColor="#8D6E63"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <!-- Línea divisoria -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#D7CCC8" />
+
+                <!-- Pestaña 3: Inactiva -->
+                <TextView
+                    android:id="@+id/btnTabSoporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="16dp"
+                    android:text="Soporte"
+                    android:textAlignment="center"
+                    android:textColor="#8D6E63"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <!-- Línea inferior -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#D7CCC8" />
+            </LinearLayout>
+
+            <!-- ========================================== -->
+            <!-- LÍNEA DIVISORIA VERTICAL                   -->
+            <!-- ========================================== -->
+            <View
+                android:id="@+id/lineaDivisoria"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:background="#D7CCC8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/panelIzquierdo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- ========================================== -->
+            <!-- PANEL DERECHO (Contenido Dinámico)         -->
+            <!-- ========================================== -->
+            <!-- Se quitó el padding de 24dp para que el scroll llegue al borde -->
+            <FrameLayout
+                android:id="@+id/panelDerecho"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/lineaDivisoria"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vpAyudaContenido"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <!-- Tu vista de instrucciones -->
+                <include
+                    android:id="@+id/vistaInstrucciones"
+                    layout="@layout/layout_ayuda_instrucciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" />
+
+                <!-- 2. NUEVA: Vista de Soporte (Oculta por defecto) -->
+                <include
+                    android:id="@+id/vistaSoporte"
+                    layout="@layout/layout_ayuda_soporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <!-- 3. NUEVA: Vista de Tutoriales (Oculta por defecto) -->
+                <include
+                    android:id="@+id/vistaTutoriales"
+                    layout="@layout/layout_ayuda_tutoriales"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <!-- ========================================== -->
+            <!-- BOTÓN DE CERRAR (X)                        -->
+            <!-- ========================================== -->
+            <ImageButton
+                android:id="@+id/btnCerrarDialogAyuda"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/bg_circulo_rojo"
+                android:contentDescription="Cerrar ventana de ayuda"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/outline_close_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

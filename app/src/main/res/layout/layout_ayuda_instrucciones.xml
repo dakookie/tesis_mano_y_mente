@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:fadeScrollbars="false"
+    android:scrollbarSize="6dp"
+    android:scrollbarThumbVertical="@drawable/bg_scrollbar"
+    android:scrollbarStyle="outsideOverlay"
+    android:padding="24dp"
+    android:clipToPadding="false">
+
+    <!-- El LinearLayout interno ahora solo se encarga de apilar los textos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Guía de Inicio Rápido"
+            android:textColor="#5D4037"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- PASO 1 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Encender la mesa"
+            android:textColor="#5D4037"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Conecta y enciende la mesa física. Verifica que el lector RFID esté despejado."
+            android:textColor="#8D6E63"
+            android:textSize="15sp" />
+
+        <!-- PASO 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Vincular el sistema"
+            android:textColor="#5D4037"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Activa el Bluetooth en este dispositivo y sincroniza la mesa desde la app."
+            android:textColor="#8D6E63"
+            android:textSize="15sp" />
+
+        <!-- PASO 3 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. Seleccionar estudiante"
+            android:textColor="#5D4037"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Ve a 'Mis Estudiantes', elige un perfil y presiona jugar."
+            android:textColor="#8D6E63"
+            android:textSize="15sp" />
+
+        <!-- PASO 4 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. ¡A jugar!"
+            android:textColor="#5D4037"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Pide al estudiante que coloque una figura sobre la zona de lectura."
+            android:textColor="#8D6E63"
+            android:textSize="15sp" />
+
+        <!-- NOTA PEDAGÓGICA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EFEBE9"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💡 Enfoque Pedagógico"
+                android:textColor="#5D4037"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Permite que el niño interactúe con las piezas a su propio ritmo. El ensayo y error son parte fundamental del aprendizaje guiado."
+                android:textColor="#8D6E63"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
